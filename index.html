@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GujaratExamHub - Free Gujarat Police exam PDFs, Technical Operator syllabus, PSI wireless notes, old papers, GK material, reasoning, maths. Top exam preparation resources for Gujarat students.">
+    <meta name="keywords" content="Gujarat Police exam, Technical Operator exam, PSI wireless, Gujarat exam PDFs, police recruitment, police notes, exam syllabus, old papers, Gujarat study material, competitive exams">
+    <meta name="author" content="GujaratExamHub">
+    <meta property="og:title" content="GujaratExamHub - Gujarat Police & Technical Operator Study Material">
+    <meta property="og:description" content="Free exam preparation PDFs for Gujarat Police, Technical Operator, PSI Wireless, and other competitive exams in Gujarat.">
+    <meta property="og:url" content="https://gujaratexamhub.github.io">
+    <meta property="og:type" content="website">
+    <title>GujaratExamHub - Free Gujarat Police Exam PDFs & Technical Operator Study Material</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#1e40af">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        }
+
+        .category-pill {
+            transition: all 0.3s ease;
+        }
+
+        .category-pill:hover {
+            transform: translateY(-2px);
+        }
+
+        .category-pill.active {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+        }
+
+        .pdf-card {
+            transition: all 0.3s ease;
+        }
+
+        .pdf-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.15);
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-outline {
+            border: 2px solid #2563eb;
+            color: #2563eb;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline:hover {
+            background: #2563eb;
+            color: white;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+            z-index: 1000;
+        }
+
+        .back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- HEADER -->
+    <header class="bg-white shadow-sm fixed top-0 left-0 right-0 z-50">
+        <nav class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                    <i class="fas fa-book-open text-white text-lg"></i>
+                </div>
+                <span class="text-2xl font-bold text-blue-600">GujaratExamHub</span>
+            </div>
+            
+            <!-- Desktop Menu -->
+            <ul class="hidden md:flex items-center space-x-8 text-gray-700 font-medium">
+                <li><a href="index.html" class="hover:text-blue-600 transition">Home</a></li>
+                <li><a href="#categories" class="hover:text-blue-600 transition">Categories</a></li>
+                <li><a href="about.html" class="hover:text-blue-600 transition">About</a></li>
+                <li><a href="contact.html" class="hover:text-blue-600 transition">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="md:hidden text-gray-700" aria-label="Open mobile menu" title="Menu">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200">
+            <ul class="flex flex-col space-y-2 px-4 py-4 text-gray-700 font-medium">
+                <li><a href="index.html" class="block py-2 hover:text-blue-600 transition">Home</a></li>
+                <li><a href="#categories" class="block py-2 hover:text-blue-600 transition">Categories</a></li>
+                <li><a href="about.html" class="block py-2 hover:text-blue-600 transition">About</a></li>
+                <li><a href="contact.html" class="block py-2 hover:text-blue-600 transition">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="pt-32 pb-16 bg-gradient-to-br from-blue-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+                    All Gujarat Police & Technical Operator Study Material in One Place
+                </h1>
+                <p class="text-lg text-gray-600 mb-8">
+                    Free PDF notes, syllabus, old papers, books & more
+                </p>
+                
+                <!-- Search Bar -->
+                <div class="search-container">
+                    <i class="fas fa-search search-icon text-xl"></i>
+                    <input 
+                        type="text" 
+                        id="searchInput"
+                        placeholder="Search PDFs (Syllabus, Papers, Books...)"
+                        class="w-full pl-16 pr-6 py-5 rounded-2xl shadow-lg border border-gray-200 text-lg focus:outline-none focus:ring-4 focus:ring-blue-200 focus:border-blue-500 transition"
+                    >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CATEGORY FILTER BAR -->
+    <section id="categories" class="py-8 bg-white sticky top-[73px] z-40 shadow-sm">
+        <div class="container mx-auto px-4">
+            <div class="flex items-center space-x-3 overflow-x-auto hide-scrollbar pb-2">
+                <button class="category-pill active whitespace-nowrap px-6 py-3 rounded-full font-medium bg-gray-100 text-gray-700" data-category="all">
+                    All PDFs
+                </button>
+                <button class="category-pill whitespace-nowrap px-6 py-3 rounded-full font-medium bg-gray-100 text-gray-700" data-category="technical-operator">
+                    Technical Operator
+                </button>
+                <button class="category-pill whitespace-nowrap px-6 py-3 rounded-full font-medium bg-gray-100 text-gray-700" data-category="psi-wireless">
+                    PSI Wireless
+                </button>
+                <button class="category-pill whitespace-nowrap px-6 py-3 rounded-full font-medium bg-gray-100 text-gray-700" data-category="police-exams">
+                    Police Exams
+                </button>
+                <button class="category-pill whitespace-nowrap px-6 py-3 rounded-full font-medium bg-gray-100 text-gray-700" data-category="gk-pdf">
+                    GK PDF
+                </button>
+                <button class="category-pill whitespace-nowrap px-6 py-3 rounded-full font-medium bg-gray-100 text-gray-700" data-category="gujarati-grammar">
+                    Gujarati Grammar
+                </button>
+                <button class="category-pill whitespace-nowrap px-6 py-3 rounded-full font-medium bg-gray-100 text-gray-700" data-category="english-grammar">
+                    English Grammar
+                </button>
+                <button class="category-pill whitespace-nowrap px-6 py-3 rounded-full font-medium bg-gray-100 text-gray-700" data-category="reasoning">
+                    Reasoning
+                </button>
+                <button class="category-pill whitespace-nowrap px-6 py-3 rounded-full font-medium bg-gray-100 text-gray-700" data-category="maths">
+                    Maths
+                </button>
+                <button class="category-pill whitespace-nowrap px-6 py-3 rounded-full font-medium bg-gray-100 text-gray-700" data-category="old-papers">
+                    Old Papers
+                </button>
+                <button class="category-pill whitespace-nowrap px-6 py-3 rounded-full font-medium bg-gray-100 text-gray-700" data-category="books">
+                    Books
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- PDF CARDS GRID -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div id="pdfCardsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- PDF Cards will be dynamically inserted here -->
+            </div>
+
+            <!-- No Results Message -->
+            <div id="noResults" class="hidden text-center py-12">
+                <i class="fas fa-search text-6xl text-gray-300 mb-4"></i>
+                <p class="text-xl text-gray-500">No PDFs found matching your search</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- About -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg flex items-center justify-center">
+                            <i class="fas fa-book-open text-white"></i>
+                        </div>
+                        <span class="text-xl font-bold text-white">GujaratExamHub</span>
+                    </div>
+                    <p class="text-sm">Your trusted platform for Free Gujarat Police, Technical Operator, PSI Wireless, and competitive exam preparation materials. Best resources for exam success in Gujarat.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-blue-400 transition">Home</a></li>
+                        <li><a href="#categories" class="hover:text-blue-400 transition">Categories</a></li>
+                        <li><a href="about.html" class="hover:text-blue-400 transition">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-400 transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Categories -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Popular Categories</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-blue-400 transition">Technical Operator</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">PSI Wireless</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Police Exams</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">Old Papers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-white font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-sm">
+
+                    </ul>
+                    <div class="flex space-x-4 mt-4">
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition" aria-label="Facebook" title="Follow us on Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition" aria-label="Twitter" title="Follow us on Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition" aria-label="Instagram" title="Follow us on Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition" aria-label="YouTube" title="Subscribe on YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="border-t border-gray-800 pt-8 text-center text-sm">
+                <p>&copy; 2025 GujaratExamHub. All rights reserved. Visit us at: <a href="https://gujaratexamhub.github.io" class="text-blue-400 hover:underline">https://gujaratexamhub.github.io</a></p>
+                <p class="mt-2 text-gray-500">
+                    <strong>Disclaimer:</strong> All PDFs are collected from publicly available sources. We do not claim ownership of any content. Contact us for removal requests. GujaratExamHub is dedicated to providing free exam preparation materials for Gujarat Police, Technical Operator recruitment, and competitive exams.
+                </p>
+                <div class="mt-4 flex flex-wrap justify-center gap-4 text-gray-400">
+                    <a href="privacy.html" class="hover:text-blue-400 transition">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="terms.html" class="hover:text-blue-400 transition">Terms of Use</a>
+                    <span>|</span>
+                    <a href="disclaimer.html" class="hover:text-blue-400 transition">Disclaimer</a>
+                    <span>|</span>
+                    <a href="dmca.html" class="hover:text-blue-400 transition">DMCA</a>
+                    <span>|</span>
+                    <a href="sitemap.html" class="hover:text-blue-400 transition">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" onclick="scrollToTop()">
+        <i class="fas fa-arrow-up text-xl"></i>
+    </button>
+
+    <script src="app.js"></script>
+</body>
+</html>

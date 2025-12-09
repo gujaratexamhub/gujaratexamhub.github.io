@@ -1,0 +1,28 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "GujaratExamHub",
+  "url": "https://gujaratexamhub.github.io",
+  "logo": "https://gujaratexamhub.github.io/logo.png",
+  "description": "Free exam preparation platform for Gujarat Police, Technical Operator, PSI Wireless, and competitive exams",
+  "sameAs": [
+    "https://facebook.com/gujaratexamhub",
+    "https://twitter.com/gujaratexamhub",
+    "https://instagram.com/gujaratexamhub",
+    "https://youtube.com/gujaratexamhub"
+  ],
+
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IN",
+    "addressRegion": "Gujarat"
+  },
+  "image": [
+    "https://gujaratexamhub.github.io/images/logo.jpg"
+  ],
+  "sameAs": [
+    "https://www.facebook.com/gujaratexamhub",
+    "https://www.twitter.com/gujaratexamhub",
+    "https://www.instagram.com/gujaratexamhub"
+  ]
+}
